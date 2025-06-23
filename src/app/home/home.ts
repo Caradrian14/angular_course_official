@@ -29,7 +29,12 @@ export class Home {
   filteredLocationList: HousingLocationInfo[] = [];
 
   constructor() {
-    this.housingLocationList = this.housing.getAllHousingLocations();
+      this.housing
+      .getAllHousingLocations()
+      .then((housingLocationList: HousingLocationInfo[]) => {
+        this.housingLocationList = housingLocationList;
+        this.filteredLocationList = housingLocationList;
+      });
     this.filteredLocationList = this.housingLocationList;
   }
 
