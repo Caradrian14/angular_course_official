@@ -15,7 +15,8 @@ import {RouterModule} from '@angular/router';
         </header>
       </a>
       <section class="content">
-        <app-home></app-home>
+        <router-outlet></router-outlet>
+        <!-- <app-home></app-home> -->
       </section>
     </main>
   `,
